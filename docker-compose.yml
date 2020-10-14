@@ -1,0 +1,16 @@
+version: "3.8"
+
+volumes:
+  db: {}
+
+services:
+  mysql:
+    image: "mysql:8.0"
+    volumes:
+      - "db:/var/lib/mysql"
+    environment:
+      - MYSQL_DATABASE=dk-api-db
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "3306:3306"
+    
