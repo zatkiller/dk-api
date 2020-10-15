@@ -3,6 +3,11 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
+import db from './db';
+import { testAuthenticate } from './db/initDevDb';
+
+// testAuthenticate();
+
 const app = express();
 const PORT = process.env.PORT || '3000';
 
