@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-import {testAuthenticate} from './db/initDevDb';
+import {testAuthenticate} from './db/dbUtil';
 
 testAuthenticate();
 

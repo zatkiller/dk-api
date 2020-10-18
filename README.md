@@ -9,3 +9,4 @@
 ## Development
 1. Create a copy of `.env.example` and rename it to `.env`. This will contain the environment variables for the app.
 2. Run `docker-compose up -d` in the project directory to start the services (eg. database) that the backend needs to run.
+3. Run `yarn dev` to start the development server
