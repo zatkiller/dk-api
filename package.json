@@ -28,6 +28,7 @@
     "compile": "tsc",
     "fix": "gts fix",
     "prepare": "yarn compile",
-    "dev": "ts-node src/server.ts"
+    "dev": "ts-node src/server.ts",
+    "sequelize": "sequelize"
   }
 }
