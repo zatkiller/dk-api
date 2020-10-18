@@ -30,6 +30,6 @@
     "fix": "gts fix",
     "prepare": "yarn compile",
     "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "sequelize": "sequelize"
+    "sequelize-cli": "sequelize-cli"
   }
 }
