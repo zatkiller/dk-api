@@ -32,7 +32,7 @@ module.exports = {
     });
   },
 
-  down: async (queryInterface, _Sequelize) => {
-    return queryInterface.dropTable('stores');
+  down: async queryInterface => {
+    return queryInterface.dropTable('Stores');
   },
 };
