@@ -40,6 +40,6 @@ Store.init(
 );
 
 Store.hasMany(Product, {foreignKey: 'storeId'});
-Product.belongsTo(Store);
+Product.belongsTo(Store, {foreignKey: 'storeId'});
 
 export default Store;
