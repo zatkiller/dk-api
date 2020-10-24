@@ -1,9 +1,12 @@
-import Store from '../models/Store';
 import {Request, Response, NextFunction} from 'express';
+import HawkerCentre from '../models/HawkerCentre';
+import Store from '../models/Store';
 
 async function retrieveStore(req: Request, res: Response, next: NextFunction) {
   try {
-    const store = await Store.findByPk(req.params.id);
+    const store = await Store.findByPk(req.params.id, {
+      include: [{model: HawkerCentre, attributes: ['name', 'address']}],
+    });
     if (store === null) {
       res.status(404).end();
       return;

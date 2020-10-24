@@ -6,44 +6,42 @@ module.exports = {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
       },
       name: {
-        type: Sequelize.DataTypes.STRING,
         allowNull: false,
+        type: Sequelize.STRING,
       },
       category: {
-        type: Sequelize.DataTypes.STRING,
+        type: Sequelize.STRING,
       },
       description: {
-        type: Sequelize.DataTypes.STRING,
+        type: Sequelize.TEXT,
       },
       price: {
-        type: Sequelize.DataTypes.DOUBLE,
-        allowNull: false,
+        type: Sequelize.DOUBLE,
       },
       image: {
-        type: Sequelize.DataTypes.STRING,
-      },
-      createdAt: {
-        allowNull: false,
-        type: Sequelize.DataTypes.DATE,
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DataTypes.DATE,
+        type: Sequelize.STRING,
       },
       storeId: {
-        type: Sequelize.DataTypes.INTEGER,
         allowNull: false,
+        type: Sequelize.INTEGER,
         references: {
           model: 'Stores',
           key: 'id',
         },
       },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE,
+      },
     });
   },
-
   down: async queryInterface => {
     await queryInterface.dropTable('Products');
   },
