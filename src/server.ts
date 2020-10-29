@@ -1,10 +1,8 @@
-import dotenvFlow from 'dotenv-flow';
-dotenvFlow.config();
-
 import express from 'express';
 import {Request, Response, NextFunction} from 'express';
 import cors from 'cors';
 
+import {PORT} from './consts';
 // import {testAuthenticate} from './db/dbUtil';
 
 // testAuthenticate();
